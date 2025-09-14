@@ -1,61 +1,61 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import { Github } from 'lucide-react'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      title: 'Google Forms to Excel',
+      description: 'A Python based tool that transforms Google Form responses into a clean, well-formatted Excel report. Features include user authentication',
+      image: '/images/excelsum.png',
+      technologies: ['Python', 'Google API', 'OpenPyXl'],
+      github: 'https://github.com/Shalom6/Google-Forms-to-Excel-Cleaner',
+      //live: 'https://example.com',
       featured: true
     },
-    {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+    /*{
+      title: 'Web-based Task Tracker',
+      description: 'A full-stack web application built with React and Node.js for tracking academic assignments and deadlines. Includes Google OAuth integration and real-time notifications.',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'Socket.io', 'MongoDB', 'Express'],
+      technologies: ['React', 'Node.js', 'TypeScript', 'Google APIs', 'MongoDB'],
       github: 'https://github.com',
-      live: 'https://example.com',
+      //live: 'https://example.com',
+      featured: false
+    },*/
+    {
+      title: '2D Treasure Hunt Game',
+      description: '2D Treasure Hunt Game made with Java for user enjoyment.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Java'],
+      github: 'https://github.com',
+      //live: 'https://example.com',
+      featured: false
+    },
+    {
+      title: 'Java Simple Calculator',
+      description: 'A command-line calculator application written in C with support for basic arithmetic operations, scientific functions, and expression parsing.',
+      image: '/images/calcproject.png',
+      technologies: ['Java', 'JavaSwing', 'JavaAwt'],
+      github: 'https://github.com/Shalom6/Calculator-App',
+      //live: 'https://example.com',
+      featured: false
+    },
+    /*{
+      title: 'Python Data Analysis Tool',
+      description: 'A Python application for analyzing academic performance data using pandas, matplotlib, and numpy. Generates visualizations and statistical reports.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'Pandas', 'Matplotlib', 'NumPy', 'Jupyter'],
+      github: 'https://github.com',
+      //live: 'https://example.com',
+      featured: false
+    },*/
+    {
+      title: 'React Portfolio Website',
+      description: 'A responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, dark mode, and mobile-first design.',
+      image: '/images/reactwebsite.png',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      github: 'https://github.com/Shalom6/Portfolio',
+      //live: 'https://example.com',
       featured: true
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current weather and forecasts for multiple locations with beautiful data visualizations.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website showcasing projects and skills with smooth animations and dark mode support.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      title: 'Blog Platform',
-      description: 'A content management system for bloggers with markdown support, SEO optimization, and comment system.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'MDX', 'Prisma', 'PostgreSQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      title: 'Chat Application',
-      description: 'A real-time chat application with private messaging, group chats, and file sharing capabilities.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
     }
   ]
 
@@ -73,7 +73,7 @@ const Projects = () => {
               My Projects
             </h1>
             <p className="text-xl text-dark-600 dark:text-dark-300">
-              A collection of projects that showcase my skills and passion for web development
+              A collection of academic and personal projects that demonstrate my programming skills and passion for software development
             </p>
           </motion.div>
         </div>
@@ -102,9 +102,11 @@ const Projects = () => {
                 viewport={{ once: true }}
                 className="card group hover:shadow-2xl transition-all duration-300"
               >
-                <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg mb-6 flex items-center justify-center">
-                  <span className="text-primary-600 font-semibold">Project Image</span>
-                </div>
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    className="aspect-video w-full object-cover rounded-lg mb-6"
+                />
                 <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">
                   {project.title}
                 </h3>
@@ -132,13 +134,11 @@ const Projects = () => {
                     <span>Code</span>
                   </a>
                   <a
-                    href={project.live}
+                    //href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-dark-600 dark:text-dark-300 hover:text-primary-600 transition-colors duration-200"
                   >
-                    <ExternalLink className="h-5 w-5" />
-                    <span>Live Demo</span>
                   </a>
                 </div>
               </motion.div>
@@ -170,9 +170,11 @@ const Projects = () => {
                 viewport={{ once: true }}
                 className="card group hover:shadow-xl transition-all duration-300"
               >
-                <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/20 dark:to-primary-800/20 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-primary-600 font-semibold">Project Image</span>
-                </div>
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    className="aspect-video w-full object-cover rounded-lg mb-6"
+                />
                 <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
@@ -205,13 +207,11 @@ const Projects = () => {
                     <span className="text-sm">Code</span>
                   </a>
                   <a
-                    href={project.live}
+                    //href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-1 text-dark-600 dark:text-dark-300 hover:text-primary-600 transition-colors duration-200"
                   >
-                    <ExternalLink className="h-4 w-4" />
-                    <span className="text-sm">Demo</span>
                   </a>
                 </div>
               </motion.div>

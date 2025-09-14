@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Code2 className="h-8 w-8 text-primary-600" />
             <span className="text-xl font-bold text-dark-900 dark:text-white">
-              Shalom
+              Shaloms Portfolio
             </span>
           </Link>
 

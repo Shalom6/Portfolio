@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleViewWork = () => {
+    navigate('/projects');
+  };
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -15,41 +21,46 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-dark-900 dark:text-white mb-6">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
-                Shalom
+                Shalom Oyewusi
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-dark-600 dark:text-dark-300 mb-8 max-w-2xl mx-auto">
-              Full Stack Developer passionate about creating beautiful, functional, and user-centered digital experiences.
+              I am a Computer Science Student at the University of Saskatchewan passionate about software development,
+              problem-solving, and creating innovative digital solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary flex items-center space-x-2 text-lg px-8 py-3"
+                  onClick={handleViewWork}  // Add this line
+                  whileHover={{scale: 1.05}}
+                  whileTap={{scale: 0.95}}
+                  className="btn-primary flex items-center space-x-2 text-lg px-8 py-3"
               >
                 <span>View My Work</span>
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-5 w-5"/>
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary flex items-center space-x-2 text-lg px-8 py-3"
-              >
-                <span>Get In Touch</span>
-                <Mail className="h-5 w-5" />
-              </motion.button>
+              <motion.a
+                  href="/public/Shalom's Resume (2).pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{scale: 1.05}}
+                  whileTap={{scale: 0.95}}
+                  className="btn-secondary flex items-center space-x-2 text-lg px-8 py-3"
+              ><span>Resume</span>
+                <Mail className="h-5 w-5"/>
+              </motion.a>
             </div>
           </motion.div>
 
           {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center space-x-6"
+              initial={{opacity: 0, y: 20}}
+              animate={{opacity: 1, y: 0}}
+              transition={{duration: 0.6, delay: 0.2}}
+              className="flex justify-center space-x-6"
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Shalom6"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -58,7 +69,7 @@ const Home = () => {
               <Github className="h-6 w-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/shalom-oyewusi-428a3234a/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: -5 }}
@@ -67,7 +78,7 @@ const Home = () => {
               <Linkedin className="h-6 w-6" />
             </motion.a>
             <motion.a
-              href="mailto:your-email@example.com"
+              href="mailto:damolaso@hotmail.com"
               whileHover={{ scale: 1.1, rotate: 5 }}
               className="p-3 rounded-full bg-dark-100 dark:bg-dark-800 text-dark-600 dark:text-dark-300 hover:text-primary-600 transition-colors duration-200"
             >
@@ -88,17 +99,17 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-dark-900 dark:text-white mb-4">
-              Technologies I Work With
+              Technologies & Skills
             </h2>
             <p className="text-xl text-dark-600 dark:text-dark-300">
-              Modern tools and frameworks for building exceptional web experiences
+              Programming languages, frameworks, and tools I use to build software solutions
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
-              'React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'MongoDB',
-              'Next.js', 'Express', 'Docker', 'AWS', 'Git', 'Tailwind CSS'
+              'Java', 'JavaScript', 'C', 'Python', 'React', 'Node.js',
+              'TypeScript', 'HTML', 'CSS', 'Tailwind CSS', 'Git', 'Google APIs'
             ].map((tech, index) => (
               <motion.div
                 key={tech}

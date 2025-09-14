@@ -16,7 +16,7 @@ const Contact = () => {
               Get In Touch
             </h1>
             <p className="text-xl text-dark-600 dark:text-dark-300">
-              Have a project in mind? Let's work together to bring your ideas to life.
+              Interested in collaborating on a project or discussing opportunities? Let's connect and explore possibilities together.
             </p>
           </motion.div>
         </div>
@@ -37,8 +37,9 @@ const Contact = () => {
                 Let's Connect
               </h2>
               <p className="text-dark-600 dark:text-dark-300 mb-8 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                As a Computer Science student, I'm always interested in learning opportunities, 
+                internships, and collaborative projects. Whether you have a question about my work 
+                or want to discuss potential opportunities, I'd love to hear from you!
               </p>
               
               <div className="space-y-6">
@@ -48,7 +49,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-dark-900 dark:text-white">Email</div>
-                    <div className="text-dark-600 dark:text-dark-300">your-email@example.com</div>
+                    <div className="text-dark-600 dark:text-dark-300">your-email@usask.ca</div>
                   </div>
                 </div>
                 
@@ -58,7 +59,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-dark-900 dark:text-white">Phone</div>
-                    <div className="text-dark-600 dark:text-dark-300">+1 (555) 123-4567</div>
+                    <div className="text-dark-600 dark:text-dark-300">+1 (306) XXX-XXXX</div>
                   </div>
                 </div>
                 
@@ -68,7 +69,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-dark-900 dark:text-white">Location</div>
-                    <div className="text-dark-600 dark:text-dark-300">Your City, Country</div>
+                    <div className="text-dark-600 dark:text-dark-300">Saskatoon, SK, Canada</div>
                   </div>
                 </div>
               </div>

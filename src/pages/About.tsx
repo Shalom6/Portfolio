@@ -3,10 +3,10 @@ import { Code2, Users, Zap, Heart } from 'lucide-react'
 
 const About = () => {
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '50+' },
-    { icon: Users, label: 'Happy Clients', value: '25+' },
-    { icon: Zap, label: 'Years Experience', value: '3+' },
-    { icon: Heart, label: 'Coffee Cups', value: '1000+' },
+    { icon: Code2, label: 'Projects Completed', value: '5+' },
+    { icon: Users, label: 'Programming Languages', value: '8+' },
+    { icon: Zap, label: 'Years Coding', value: '2+' },
+    { icon: Heart, label: 'Git Commits', value: '100+' },
   ]
 
   return (
@@ -23,9 +23,9 @@ const About = () => {
               About Me
             </h1>
             <p className="text-xl text-dark-600 dark:text-dark-300 leading-relaxed">
-              I'm a passionate full-stack developer with a love for creating digital experiences 
-              that make a difference. With expertise in modern web technologies, I bring ideas 
-              to life through clean, efficient, and scalable code.
+              I'm a Computer Science student at the University of Saskatchewan with a passion for 
+              software development and problem-solving. I enjoy working with various programming 
+              languages and frameworks to create innovative solutions and learn new technologies.
             </p>
           </motion.div>
         </div>
@@ -75,18 +75,21 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-dark-600 dark:text-dark-300">
                 <p>
-                  My journey into web development started with curiosity about how websites work. 
-                  What began as simple HTML pages has evolved into a passion for building complex, 
-                  user-focused applications.
+                  My journey in Computer Science began with curiosity about how software works. 
+                  Starting with basic programming concepts, I've developed a strong foundation in 
+                  multiple programming languages including Java, JavaScript, C, and Python.
                 </p>
                 <p>
-                  I specialize in React, TypeScript, and Node.js, but I'm always eager to learn 
-                  new technologies. I believe in writing clean, maintainable code and creating 
-                  experiences that users love.
+                  As a student at the University of Saskatchewan, I've gained experience with 
+                  modern web technologies like React, Node.js, and TypeScript, while also 
+                  working with Google APIs and authentication systems. I'm passionate about 
+                  learning new technologies and applying them to solve real-world problems.
                 </p>
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing 
-                  to open source projects, or sharing knowledge with the developer community.
+                  When I'm not studying or coding, you'll find me exploring new programming 
+                  concepts, working on personal projects, or contributing to open source 
+                  initiatives. I believe in continuous learning and staying up-to-date with 
+                  the latest developments in technology.
                 </p>
               </div>
             </div>
@@ -96,14 +99,108 @@ const About = () => {
                   <span className="text-4xl font-bold text-white">S</span>
                 </div>
                 <h3 className="text-xl font-semibold text-dark-900 dark:text-white mb-2">
-                  Shalom
+                  Shalom Oyewusi
                 </h3>
                 <p className="text-dark-600 dark:text-dark-300">
-                  Full Stack Developer
+                  Computer Science Student
+                </p>
+                <p className="text-sm text-dark-500 dark:text-dark-400">
+                  University of Saskatchewan
                 </p>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-20 px-4 bg-dark-50 dark:bg-dark-800">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-dark-900 dark:text-white mb-4">
+              Technical Skills
+            </h2>
+            <p className="text-xl text-dark-600 dark:text-dark-300">
+              Programming languages, frameworks, and tools I work with
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Programming Languages */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="card"
+            >
+              <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
+                Programming Languages
+              </h3>
+              <div className="space-y-3">
+                {['Java', 'JavaScript', 'C', 'Python', 'TypeScript', 'HTML', 'CSS'].map((lang) => (
+                  <div key={lang} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{lang}</span>
+                    <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Frameworks & Libraries */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="card"
+            >
+              <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
+                Frameworks & Libraries
+              </h3>
+              <div className="space-y-3">
+                {['React', 'Node.js', 'Tailwind CSS', 'Python Libraries', 'Google APIs'].map((framework) => (
+                  <div key={framework} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{framework}</span>
+                    <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '60%' }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Development Tools */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="card"
+            >
+              <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
+                Development Tools
+              </h3>
+              <div className="space-y-3">
+                {['Git', 'Google Authentication', 'Google APIs', 'VS Code', 'Terminal'].map((tool) => (
+                  <div key={tool} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{tool}</span>
+                    <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
