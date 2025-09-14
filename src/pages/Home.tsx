@@ -40,7 +40,7 @@ const Home = () => {
                 <ArrowRight className="h-5 w-5"/>
               </motion.button>
               <motion.a
-                  href="/public/Shalom's Resume (2).pdf"
+                  href="/Shalom's Resume (2).pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{scale: 1.05}}
