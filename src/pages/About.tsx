@@ -3,8 +3,8 @@ import { Code2, Users, Zap, Heart } from 'lucide-react'
 
 const About = () => {
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '5+' },
-    { icon: Users, label: 'Programming Languages', value: '8+' },
+    { icon: Code2, label: 'Projects Completed', value: '4+' },
+    { icon: Users, label: 'Programming Languages', value: '7' },
     { icon: Zap, label: 'Years Coding', value: '2+' },
     { icon: Heart, label: 'Git Commits', value: '100+' },
   ]
