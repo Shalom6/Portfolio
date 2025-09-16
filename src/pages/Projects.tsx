@@ -5,8 +5,8 @@ const Projects = () => {
   const projects = [
     {
       title: 'Google Forms to Excel',
-      description: 'A Python based tool that transforms Google Form responses into a clean, well-formatted Excel report. Features include user authentication',
-      image: '/images/excelsum.png',
+      description: 'A Python based tool that transforms Google Form responses into a clean, well-formatted Excel report. Features include user authentication.',
+      image: '/images/updatedexcel.png',
       technologies: ['Python', 'Google API', 'OpenPyXl'],
       github: 'https://github.com/Shalom6/Google-Forms-to-Excel-Cleaner',
       //live: 'https://example.com',
