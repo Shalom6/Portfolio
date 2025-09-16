@@ -97,7 +97,7 @@ const About = () => {
                 My Journey
               </h2>
               <div className="space-y-4 text-dark-600 dark:text-dark-300">
-                {/*Need to fix this journey part*/}
+
                 <p>
                   My journey in Computer Science began with curiosity about how software works. 
                   Starting with basic programming concepts, I've developed a strong foundation in 
@@ -167,7 +167,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Programming Languages
               </h3>
-              {/*Need to change these so i can edit each one manually*/}
+              {/*Sliders for programming languages*/}
               <div className="space-y-3">
                 {programmingLanguages.map((lang) => (
                   <div key={lang.name} className="flex items-center justify-between">
@@ -179,7 +179,6 @@ const About = () => {
                 ))}
               </div>
             </motion.div>
-
             {/* Frameworks & Libraries */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -191,7 +190,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Frameworks & Libraries
               </h3>
-              {/*Need to change these so I can edit each one manually*/}
+              {/*Sliders for frameworks and libraries*/}
               <div className="space-y-3">
                 {frameworksAndLibraries.map((framework) => (
                   <div key={framework.name} className="flex items-center justify-between">
@@ -215,7 +214,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Development Tools
               </h3>
-              {/*Need to change these so i can edit each one manually*/}
+              {/*Sliders for dev tools*/}
               <div className="space-y-3">
                 {developmentTools.map((tool) => (
                   <div key={tool.name} className="flex items-center justify-between">
