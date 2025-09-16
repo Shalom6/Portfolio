@@ -8,6 +8,29 @@ const About = () => {
     { icon: Zap, label: 'Years Coding', value: '2+' },
     { icon: Heart, label: 'Git Commits', value: '100+' },
   ]
+  const programmingLanguages = [
+    { name: 'Java', proficiency: '90%' },
+    { name: 'JavaScript', proficiency: '75%' },
+    { name: 'CSS', proficiency: '80%' },
+    {name: 'HTML', proficiency: '80%'},
+    { name: 'Python', proficiency: '70%' },
+    { name: 'TypeScript', proficiency: '65%' },
+    { name: 'C', proficiency: '60%'},
+  ]
+  const frameworksAndLibraries = [
+    { name: 'React', proficiency: '80%' },
+    { name: 'Node.js', proficiency: '50%' },
+    { name: 'Tailwind CSS', proficiency: '50%' },
+    { name: 'Python Libraries', proficiency: '55%' },
+    { name: 'Google APIs', proficiency: '65%' },
+  ]
+  const developmentTools = [
+    { name: 'Git', proficiency: '100%' },
+    { name: 'Google Authentication', proficiency: '90%' },
+    { name: 'Google APIs', proficiency: '90%' },
+    { name: 'VS Code', proficiency: '80%' },
+    { name: 'Terminal', proficiency: '85%' },
+  ]
 
   return (
     <div className="pt-16">
@@ -74,6 +97,7 @@ const About = () => {
                 My Journey
               </h2>
               <div className="space-y-4 text-dark-600 dark:text-dark-300">
+                {/*Need to fix this journey part*/}
                 <p>
                   My journey in Computer Science began with curiosity about how software works. 
                   Starting with basic programming concepts, I've developed a strong foundation in 
@@ -143,12 +167,13 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Programming Languages
               </h3>
+              {/*Need to change these so i can edit each one manually*/}
               <div className="space-y-3">
-                {['Java', 'JavaScript', 'C', 'Python', 'TypeScript', 'HTML', 'CSS'].map((lang) => (
-                  <div key={lang} className="flex items-center justify-between">
-                    <span className="text-dark-600 dark:text-dark-300">{lang}</span>
+                {programmingLanguages.map((lang) => (
+                  <div key={lang.name} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{lang.name}</span>
                     <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
-                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: lang.proficiency }}></div>
                     </div>
                   </div>
                 ))}
@@ -166,12 +191,13 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Frameworks & Libraries
               </h3>
+              {/*Need to change these so I can edit each one manually*/}
               <div className="space-y-3">
-                {['React', 'Node.js', 'Tailwind CSS', 'Python Libraries', 'Google APIs'].map((framework) => (
-                  <div key={framework} className="flex items-center justify-between">
-                    <span className="text-dark-600 dark:text-dark-300">{framework}</span>
+                {frameworksAndLibraries.map((framework) => (
+                  <div key={framework.name} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{framework.name}</span>
                     <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
-                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '60%' }}></div>
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: framework.proficiency }}></div>
                     </div>
                   </div>
                 ))}
@@ -189,12 +215,13 @@ const About = () => {
               <h3 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
                 Development Tools
               </h3>
+              {/*Need to change these so i can edit each one manually*/}
               <div className="space-y-3">
-                {['Git', 'Google Authentication', 'Google APIs', 'VS Code', 'Terminal'].map((tool) => (
-                  <div key={tool} className="flex items-center justify-between">
-                    <span className="text-dark-600 dark:text-dark-300">{tool}</span>
+                {developmentTools.map((tool) => (
+                  <div key={tool.name} className="flex items-center justify-between">
+                    <span className="text-dark-600 dark:text-dark-300">{tool.name}</span>
                     <div className="w-24 bg-dark-200 dark:bg-dark-700 rounded-full h-2">
-                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: '85%' }}></div>
+                      <div className="bg-primary-600 h-2 rounded-full" style={{ width: tool.proficiency }}></div>
                     </div>
                   </div>
                 ))}

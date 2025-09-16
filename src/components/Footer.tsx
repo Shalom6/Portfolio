@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-dark-800 pt-8 text-center text-dark-400">
-          <p>&copy; 2024 CS Student Portfolio. All rights reserved. Built with React & TypeScript.</p>
+          <p>&copy; 2025 Shalom Oyewusi. Built with React & TypeScript.</p>
         </div>
       </div>
     </footer>
